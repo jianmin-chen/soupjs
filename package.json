@@ -1,6 +1,6 @@
 {
-  "name": "soupjs",
-  "version": "1.0.0",
+  "name": "@jianmin-chen/soupjs",
+  "version": "0.1.1",
   "description": "SoupJS is a JavaScript library built for simple web scraping.",
   "main": "index.js src/index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   ],
   "author": "Jianmin Chen <jianmin0chen@gmail.com> (https://jianmin-chen.github.io/blog)",
   "license": "MIT",
-  "devDependencies": {
-    "jsdom": "16.5.3",
+  "dependencies": {
+    "jsdom": "16.6.0",
     "node-fetch": "2.6.1"
   }
 }
