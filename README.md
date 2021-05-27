@@ -28,7 +28,7 @@ soupjs.scrape(url).then(res => {
      */
 }).catch(err => console.log(err));
 ```
-For more information on using SoupJS, check out the [documentation](https://github.com/jianmin-chen/soupjs).
+For more information on using SoupJS, check out the [documentation](https://jianmin-chen.github.io/soupjs-docs).
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at [https://github.com/jianmin-chen/soupjs](https://github.com/jianmin-chen/soupjs). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
