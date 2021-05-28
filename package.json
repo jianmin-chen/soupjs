@@ -2,8 +2,10 @@
   "name": "@jianmin-chen/soupjs",
   "version": "1.0.0",
   "description": "SoupJS is a JavaScript library built for simple web scraping.",
-  "main": "index.js src/index.js",
+  "main": "index.js dist/index.js",
   "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "babel --out-dir dist src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,10 +17,24 @@
     "scraping",
     "soup"
   ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "author": "Jianmin Chen <jianmin0chen@gmail.com> (https://jianmin-chen.github.io/blog)",
   "license": "MIT",
   "dependencies": {
     "jsdom": "16.6.0",
     "node-fetch": "2.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
+    "rimraf": "3.0.2"
+  },
+  "babel": {
+    "presets": ["es2015", "stage-2"]
   }
 }

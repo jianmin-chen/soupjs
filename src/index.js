@@ -1,12 +1,6 @@
-/*
- * Import necessary libraries
- * node-fetch: Filler for the browser-supported fetch API
- * fs: Node's filesystem module
- * jsdom: Filler for the browser-supported DOM
- */
-const fetch = require("node-fetch");
-const readFile = require("fs").readFile;
-const JSDOM = require("jsdom").JSDOM;
+import fetch from "node-fetch";
+import readFile from "fs";
+import JSDOM from "jsdom";
 
 const MULTI_VALUED_ATTRIBUTES = ["class", "rel", "rev", "accept-charset", "headers", "accesskey"];
 let STRIP = (text) => text.replace(/[\n\r]+|[\s]{2,}/g, " ").trim();

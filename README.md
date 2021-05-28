@@ -1,4 +1,7 @@
 # SoupJS
+![version badge](https://img.shields.io/badge/version-1.0.0-brightgreen)
+![js-dom version badge](https://img.shields.io/badge/js--dom-16.6.0-informational)
+![node-fetch version badge](https://img.shields.io/badge/node--fetch-2.6.1-informational)
 
 ## About
 SoupJS is a JavaScript library built for simple web scraping.
