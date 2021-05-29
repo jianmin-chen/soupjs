@@ -2,7 +2,7 @@
   "name": "@jianmin-chen/soupjs",
   "version": "1.0.0",
   "description": "SoupJS is a JavaScript library built for simple web scraping.",
-  "main": "index.js dist/index.js",
+  "main": "dist/index",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "babel --out-dir dist src",
