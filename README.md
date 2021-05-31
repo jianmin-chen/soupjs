@@ -15,7 +15,7 @@ npm i @jianmin-chen/soupjs
 ## Usage
 Here's a basic example of using SoupJS:
 ```javascript
-const soupjs = require("soupjs");
+const soupjs = require("@jianmin-chen/soupjs");
 soupjs.scrape(url).then(res => {
     // Search for HTMl elements belonging to CSS selector
     let pTags = res.findAll("p");

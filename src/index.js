@@ -1,6 +1,6 @@
-import fetch from "node-fetch";
-import readFile from "fs";
-import JSDOM from "jsdom";
+const fetch = require("node-fetch");
+const readFile = require("fs").readFile;
+const JSDOM = require("jsdom").JSDOM;
 
 const MULTI_VALUED_ATTRIBUTES = ["class", "rel", "rev", "accept-charset", "headers", "accesskey"];
 let STRIP = (text) => text.replace(/[\n\r]+|[\s]{2,}/g, " ").trim();
@@ -8,7 +8,12 @@ let STRIP = (text) => text.replace(/[\n\r]+|[\s]{2,}/g, " ").trim();
 class Tag {
     constructor(element) {
         this.tag = element.tagName.toLowerCase();
-        this.text = STRIP(element.textContent) || STRIP(element.value);
+        this.text = null;
+        if (element.textContent) {
+            this.text = STRIP(element.textContent);
+        } else if (element.value) {
+            this.text = STRIP(element.value);
+        }
         this.attrs = {};
         Array.from(element.attributes).forEach(attr => {
             if (MULTI_VALUED_ATTRIBUTES.includes(attr.nodeName)) {
@@ -48,9 +53,9 @@ class Tag {
 }
 
 class Soup {
-    constructor(content) {
-        this.htmlContent = content;
-        this.document = new JSDOM(content).window.document.documentElement;
+    constructor(response) {
+        this.htmlContent = response;
+        this.document = new JSDOM(response).window.document.documentElement;
         this.text = this.document.textContent;
     }
 
@@ -66,7 +71,7 @@ class Soup {
     findAll(selector, limit=null) {
         let tags = [];
         let query = Array.from(this.document.querySelectorAll(selector));
-        if (limit && query.length < limit) {
+        if (limit) {
             // Limit query elements by slicing
             query = query.slice(...limit);
         }

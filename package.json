@@ -25,16 +25,23 @@
   "author": "Jianmin Chen <jianmin0chen@gmail.com> (https://jianmin-chen.github.io/blog)",
   "license": "MIT",
   "dependencies": {
+    "@babel/runtime": "7.14.0",
     "jsdom": "16.6.0",
     "node-fetch": "2.6.1"
   },
   "devDependencies": {
     "@babel/cli": "7.14.3",
     "@babel/core": "7.14.3",
+    "@babel/plugin-transform-runtime": "7.14.3",
     "@babel/preset-env": "7.14.4",
     "rimraf": "3.0.2"
   },
   "babel": {
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime"
+      ]
+    ],
     "presets": [
       "@babel/preset-env"
     ]
