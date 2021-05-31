@@ -1,5 +1,5 @@
 {
-  "name": "@jianmin-chen/soupjs",
+  "name": "soupjs-lib",
   "version": "1.0.0",
   "description": "SoupJS is a JavaScript library built for simple web scraping.",
   "main": "dist/index",

@@ -9,13 +9,13 @@ SoupJS is a JavaScript library built for simple web scraping.
 ## Installation
 To install using `npm`, run:
 ```
-npm i @jianmin-chen/soupjs
+npm i soupjs-lib
 ```
 
 ## Usage
 Here's a basic example of using SoupJS:
 ```javascript
-const soupjs = require("@jianmin-chen/soupjs");
+const soupjs = require("soupjs-lib");
 soupjs.scrape(url).then(res => {
     // Search for HTMl elements belonging to CSS selector
     let pTags = res.findAll("p");
