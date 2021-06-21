@@ -31,7 +31,9 @@ soupjs.scrape(url).then(res => {
      */
 }).catch(err => console.log(err));
 ```
-For more information on using SoupJS, check out the [documentation](https://jianmin-chen.github.io/soupjs-docs).
+A basic rundown of this code. First, we're importing the SoupJS library. After we do that, we call a method `scrape()` which scrapes the content located at a URL `url`. Since SoupJS is based off of `fetch()`, we can use syntax similar to how the `fetch()` API is used to get the results, which are stored in a variable named `res`. We search for paragraph tags inside `res`, by using a method belonging to `res` known as `findAll()`. Finally, we log the paragraph tags - if there are any - and return an error if necessary.
+
+To find out SoupJS works under the hood, visit the [docs](https://jianmin-chen.github.io/soupjs-docs).
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at [https://github.com/jianmin-chen/soupjs](https://github.com/jianmin-chen/soupjs). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
