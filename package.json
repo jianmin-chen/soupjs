@@ -25,7 +25,7 @@
   "author": "Jianmin Chen <jianmin0chen@gmail.com> (https://jianmin-chen.github.io/blog)",
   "license": "MIT",
   "dependencies": {
-    "@babel/runtime": "7.16.7",
+    "@babel/runtime": "7.17.0",
     "jsdom": "16.6.0",
     "node-fetch": "2.6.7"
   },
